@@ -239,6 +239,10 @@ static inline void *offset_to_ptr(const int *off)
 #define ARCH_SEL(a,b) b
 #endif
 
+#ifndef __noreorder
+#define __noreorder
+#endif
+
 /*
  * Force the compiler to emit 'sym' as a symbol, so that we can reference
  * it from inline assembler. Necessary in case 'sym' could be inlined
